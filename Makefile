@@ -16,5 +16,5 @@ serialtester: serialtester.c Lab4_IO.c
 	mpicc -g -Wall -o serialtester serialtester.c Lab4_IO.c -lm
 
 clean:
-	rm -rf tmp datatrim.o datatrim main.o main basic basic.o
+	rm -rf tmp datatrim.o datatrim main.o main basic basic.o serial serial.o
 

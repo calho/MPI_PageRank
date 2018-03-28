@@ -1,0 +1,23 @@
+pair of programs that calculates page rank with MPI
+
+basic mainly uses send/recv/bcast
+main mainly uses scatterv/allgatherv
+
+to run main on single computer
+mpirun -np [core #] ./main
+to run main on cluster
+mpirun -np [core #] -f [hosts file] ./main
+
+to run baisc on single computer
+mpirun -np [core #] ./basic
+to run basic on cluster
+mpirun -np [core #] -f [hosts file] ./basic
+
+to run program 10 times on a certain node size
+./copyToCluster.sh 
+//This will create data inputs based on size given and then copies it to our destination computers
+./mycheck.sh
+//this is what will run a program multiple times
+//inputs required for it will be if it will be running singularly or on cluster
+//other inputs will be program name (main/basic)
+//default for rest is fine 
